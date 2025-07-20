@@ -4,7 +4,6 @@ description = "Smart contracts for blockchain-powered real estate transactions"
 authors = ["TTL Development Team"]
 telemetry = false
 cache_dir = "./.cache"
-requirements = []
 
 [contracts.property-registry]
 path = "src/property-registry.clar"

@@ -59,6 +59,8 @@ export interface PropertyEncumbrance {
   recordedDate: Date;
   isActive: boolean;
   blockchainTxId?: string;
+  recordedBy?: string;
+  encumbranceId?: number; // On-chain encumbrance ID
 }
 
 export enum EncumbranceType {
@@ -82,4 +84,20 @@ export interface CreatePropertyDto {
   yearBuilt?: number;
   bedrooms?: number;
   bathrooms?: number;
+}
+
+export interface CreateEncumbranceDto {
+  propertyId: string;
+  type: EncumbranceType;
+  description: string;
+  amount?: number;
+  creditor?: string;
+}
+
+export interface PropertyValidationResult {
+  isValid: boolean;
+  isClearForTransfer: boolean;
+  hasActiveEncumbrances: boolean;
+  encumbranceCount: number;
+  validationErrors: string[];
 }
