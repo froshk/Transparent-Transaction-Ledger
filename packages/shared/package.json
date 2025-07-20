@@ -1,0 +1,21 @@
+{
+  "name": "@ttl/shared",
+  "version": "0.1.0",
+  "description": "Shared types, utilities, and configurations for Transparent Transaction Ledger",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "private": true,
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "lint": "eslint \"src/**/*.ts\" --fix",
+    "type-check": "tsc --noEmit",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {
+    "@stacks/transactions": "^6.13.1"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.3"
+  }
+}

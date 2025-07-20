@@ -1,0 +1,38 @@
+[project]
+name = "transparent-transaction-ledger"
+description = "Smart contracts for blockchain-powered real estate transactions"
+authors = ["TTL Development Team"]
+telemetry = false
+cache_dir = "./.cache"
+requirements = []
+
+[contracts.property-registry]
+path = "src/property-registry.clar"
+clarity_version = 2
+epoch = 2.4
+
+[contracts.earnest-money]
+path = "src/earnest-money.clar"
+clarity_version = 2
+epoch = 2.4
+
+[contracts.title-transfer]
+path = "src/title-transfer.clar"
+clarity_version = 2
+epoch = 2.4
+
+[[project.requirements]]
+contract_id = "SP000000000000000000002Q6VF78.pox-4"
+
+[repl]
+costs_version = 2
+parser_version = 2
+
+[repl.analysis]
+passes = ["check_checker"]
+
+[repl.analysis.check_checker]
+strict = false
+trusted_sender = false
+trusted_caller = false
+callee_filter = false
