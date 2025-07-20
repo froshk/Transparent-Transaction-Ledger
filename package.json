@@ -1,0 +1,70 @@
+{
+  "name": "transparent-transaction-ledger",
+  "version": "1.0.0",
+  "description": "A blockchain-powered platform revolutionizing real estate transactions through transparency, automation, and security",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "packageManager": "pnpm@8.15.0",
+  "engines": {
+    "node": ">=18.0.0",
+    "pnpm": ">=8.0.0"
+  },
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "lint": "turbo run lint",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "test": "turbo run test",
+    "test:e2e": "turbo run test:e2e",
+    "clean": "turbo run clean && rm -rf node_modules",
+    "type-check": "turbo run type-check",
+    "contracts:build": "cd contracts && clarinet check",
+    "contracts:test": "cd contracts && clarinet test",
+    "contracts:deploy": "cd contracts && clarinet deploy"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^6.21.0",
+    "@typescript-eslint/parser": "^6.21.0",
+    "eslint": "^8.56.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-jsx-a11y": "^6.8.0",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^15.2.0",
+    "prettier": "^3.2.4",
+    "turbo": "^1.12.4",
+    "typescript": "^5.3.3"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{json,md}": [
+      "prettier --write"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/your-org/transparent-transaction-ledger.git"
+  },
+  "keywords": [
+    "blockchain",
+    "real-estate",
+    "stacks",
+    "smart-contracts",
+    "transparency",
+    "automation"
+  ],
+  "author": "TTL Development Team",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/your-org/transparent-transaction-ledger/issues"
+  },
+  "homepage": "https://github.com/your-org/transparent-transaction-ledger#readme"
+}
